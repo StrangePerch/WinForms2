@@ -13,10 +13,11 @@ namespace WinFormApp
     public partial class Form2 : Form
     {
         public Product product;
-        public Form2(Product product)
+        public Form2(Product product, string mode)
         {
             this.product = product;
             InitializeComponent();
+            this.Text = mode;
 
             NameBox.Text = this.product.Name;
             Description.Text = this.product.Description;

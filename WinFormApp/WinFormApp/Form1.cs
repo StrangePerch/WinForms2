@@ -35,6 +35,8 @@ namespace WinFormApp
                     products.Add(temp);
                     comboBox1.Items.Add(temp.Name);
                 }
+
+                comboBox1.SelectedIndex = 0;
                 reader.Close();
             }
         }
@@ -60,7 +62,7 @@ namespace WinFormApp
         private void button1_Click(object sender, EventArgs e)
         {
             Product temp = new Product();
-            Form2 f2 = new Form2(temp);
+            Form2 f2 = new Form2(temp, "Add");
             f2.ShowDialog();
             temp = f2.product;
             if (temp.Name.Length > 0)
@@ -84,12 +86,12 @@ namespace WinFormApp
             if (index >= 0)
             {
                 Product temp = products[index];
-                Form2 f2 = new Form2(temp);
+                Form2 f2 = new Form2(temp, "Edit");
                 f2.ShowDialog();
                 temp = f2.product;
                 if (temp.Name.Length > 0)
                 {
-                    products.Add(temp);
+                    products[index] = temp;
                     comboBox1.Items[index] = temp.Name;
                 }
             }
