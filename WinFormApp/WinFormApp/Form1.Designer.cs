@@ -72,6 +72,7 @@
             // 
             // Cost
             // 
+            this.Cost.Enabled = false;
             this.Cost.Location = new System.Drawing.Point(137, 266);
             this.Cost.Name = "Cost";
             this.Cost.Size = new System.Drawing.Size(44, 20);
@@ -88,6 +89,7 @@
             // 
             // listBox1
             // 
+            this.listBox1.Enabled = false;
             this.listBox1.FormattingEnabled = true;
             this.listBox1.Location = new System.Drawing.Point(360, 86);
             this.listBox1.Name = "listBox1";
